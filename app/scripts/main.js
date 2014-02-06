@@ -1,40 +1,40 @@
-console.log('\'Allo \'Allo!');
+// // console.log('\'Allo \'Allo!');
 
-// Collections spec
+// // Collections spec
  
-// should make a new instance of a collection
-students = new Collection();
- 
- 
-// if given an array, it should store array
-// in a property called "models"
-var quarterOne2014 = [
-  {
-    name: 'Bower',
-    id: '1'
-  },
-  {
-    name: 'Jack',
-    id: '2'
-  }
-]
-students = new Collection(quarterOne2014)
-// so this would return
-{
-  models: [{name: 'Bower', id: '1'},{name: 'Jack', id:'2'}]
-}
+// // should make a new instance of a collection
+// students = new Collection();
  
  
-// a Collection has a .find() method that searches by ID
-students.find('1') // should return {name: 'Bower', id: '1'}
+// // if given an array, it should store array
+// // in a property called "models"
+// var quarterOne2014 = [
+//   {
+//     name: 'Bower',
+//     id: '1'
+//   },
+//   {
+//     name: 'Jack',
+//     id: '2'
+//   }
+// ]
+// students = new Collection(quarterOne2014)
+// // so this would return
+// {
+//   models: [{name: 'Bower', id: '1'},{name: 'Jack', id:'2'}]
+// }
  
-// a Collection has an .add() method that takes an object literal,
-// and adds it to the models array
-students.add({name: 'jimmy', id:'3'})
  
-// a Collection has a .remove() method that takes an id,
-// and removes it from the models array
-students.remove('3')
+// // a Collection has a .find() method that searches by ID
+// students.find('1') // should return {name: 'Bower', id: '1'}
+ 
+// // a Collection has an .add() method that takes an object literal,
+// // and adds it to the models array
+// students.add({name: 'jimmy', id:'3'})
+ 
+// // a Collection has a .remove() method that takes an id,
+// // and removes it from the models array
+// // students.remove('3')
 
 
 
@@ -59,6 +59,13 @@ function Collection (models) {
       return result;
     }
   }
+
+   this.add = function (addedArray) {
+   	var result;
+
+	this.models.push(addedArray)
+	}
+
 }
 
 
@@ -70,6 +77,26 @@ function Collection (models) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// has an .empty() method 
+
+	// has an .random() method
+
+	// has a .length() method
 
 
 

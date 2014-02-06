@@ -1,6 +1,6 @@
 /* global describe, it */
-
-	(function () {
+ 
+(function () {
     'use strict';
  
     describe('A Collection constructor', function () {
@@ -26,7 +26,7 @@
       describe("has a .find() method",function(){
         it("should return an object when given an id that is present in the models", function(){
           var students = new Collection([{name: 'Jim', id: '99'}]);
-          expect(students.find('99')).to.deep.equal({name: 'Jim', id: '99'})
+          expect(students.find('99')).to.deep.equal({name: 'Jim', id: '99'});	
         });
  
         it("should not return an object when that id is not present in the models", function(){
@@ -48,37 +48,28 @@
       });
  
       describe("has an .add() method",function(){
-        it("should add the object it's given to the models property");
+        it("should add the object it's given to the models property",function(){
           var students = new Collection([{name: 'Jim', id: '99'}]);
-          expect(students.add('Jim', '99')).to.equal([{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jim', id: '99'}])
-        
+            students.add({name: 'Josh', id: '4'});
 
-        it("should increase the models property's length by 1");
-          var students = new Collection;
-          students.add({name: 'Jim', id: '99'});
-		  expect(students.length).to.equal(3);
+            expect(students.models[1]).to.deep.equal({name: 'Josh', id: '4'});
+        });
 
 
-		  var students = new Collection([{name: 'Jim', id: '99'}]);
-		  expect(students.add.length).to.equal(3);
+        it("should increase the models property's length by 1", function(){
+          var students = new Collection([{name: 'Jim', id: '99'}]);
+            students.add({name: 'Josh', id: '4'});
 
+            expect(students.models.length).to.equal(2);
+        });
 
-
-
-        // it("should only accept a single object as an argument");
-
-
+        it("should only accept a single object as an argument");
         it("should not  accept an empty object as an argument");
-         var students = new Collection([{name: 'Jim', id: '99'}]);
-         expect (students.)
-
         it("should throw an error when given an object without and id property");
-
-
       });
  
       describe("has a .remove() method",function(){
-        it("should, when given an id, remove the corresponding object from the models property")
+        it("should, when given an id, remove the corresponding object from the models property");
         it("should decrease the models property's length by 1");
         it("should only accept a single string as an id argument");
         it("should return true on successful removal");
