@@ -71,7 +71,11 @@ function Collection (models) {
 
 	}
 
-	
+	if (!obj.hasOwnProperty('id')){
+		throw new Error('id is empty');
+
+	}	
+
 	this.models.push(obj)
 	}		
 }
