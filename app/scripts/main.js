@@ -60,15 +60,14 @@ function Collection (models) {
     }
   }
 
-   this.add = function (addedArray) {
+   this.add = function (obj) {
    	var result;
 
-	this.models.push(addedArray)
+	this.models.push(obj)
 	}
 
 }
-
-
+	
 
 
 

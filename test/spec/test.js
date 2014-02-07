@@ -56,15 +56,19 @@
         });
 
 
-        it("should increase the models property's length by 1", function(){
+        it("should increase the models property's length by 1",function(){
           var students = new Collection([{name: 'Jim', id: '99'}]);
             students.add({name: 'Josh', id: '4'});
-
+            console.log(students);
             expect(students.models.length).to.equal(2);
         });
 
-        it("should only accept a single object as an argument");
-        it("should not  accept an empty object as an argument");
+        it("should only accept a single object as an argument",function(){
+          var students = new Collection([{name: 'Jim', id: '99'}]);
+            expect(function(){students.add({name: 'Josh', id: '4'}, {name: 'Maurice', id: '5'})}).to.throw(Error);
+        });
+
+        it("should not accept an empty object as an argument");
         it("should throw an error when given an object without and id property");
       });
  
