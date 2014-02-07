@@ -84,6 +84,10 @@ function Collection (models) {
 	this.remove = function (removeObj) {
 	 var result;
 	 
+	 if (_.isString(removeObj) !=true) {
+	 	throw new Error('not a string')
+	 }
+
 	this.models = _.reject(this.models, function(removeId){
 	 	return removeId.id === removeObj;
 	})

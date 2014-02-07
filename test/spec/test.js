@@ -39,7 +39,7 @@
           expect(students.find('1')).to.equal(undefined);
         });
  
-        it("should throw an error when given an arguemnt other than a string", function(){
+        it("should throw an error when given an argument other than a string", function(){
           var students = new Collection([{name: 'Jim', id: '99'}]);
           expect(function(){students.find(1)}).to.throw(Error);
           expect(function(){students.find({})}).to.throw(Error);
@@ -101,7 +101,14 @@
 
         });
 
-        it("should only accept a single string as an id argument");
+        it("should only accept a single string as an id argument",function(){
+          var students = new Collection([{name: 'Jim', id: '99'}, {name: 'Hector', id: '12'}]);
+          	expect(function(){students.find(1)}).to.throw(Error);
+          	expect(function(){students.find({})}).to.throw(Error);
+          	expect(function(){students.find([])}).to.throw(Error);
+        });
+
+
         it("should return true on successful removal");
       })
     })
