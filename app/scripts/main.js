@@ -92,7 +92,9 @@ function Collection (models) {
 	 	return removeId.id === removeObj;
 	})
 
-	}
+	return true;
+
+	};
 
 };
 

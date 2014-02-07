@@ -103,13 +103,16 @@
 
         it("should only accept a single string as an id argument",function(){
           var students = new Collection([{name: 'Jim', id: '99'}, {name: 'Hector', id: '12'}]);
-          	expect(function(){students.find(1)}).to.throw(Error);
-          	expect(function(){students.find({})}).to.throw(Error);
-          	expect(function(){students.find([])}).to.throw(Error);
+          	expect(function(){students.remove(1)}).to.throw(Error);
+          	expect(function(){students.remove({})}).to.throw(Error);
+          	expect(function(){students.remove([])}).to.throw(Error);
         });
 
 
-        it("should return true on successful removal");
+        it("should return true on successful removal",function(){
+          var students = new Collection([{name: 'Jim', id: '99'}, {name: 'Hector', id: '12'}]);
+           expect(students.remove('99')).to.equal(true);
+        });
       })
     })
 })();
