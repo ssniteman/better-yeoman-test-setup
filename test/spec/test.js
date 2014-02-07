@@ -83,7 +83,16 @@
        });
  
       describe("has a .remove() method",function(){
-        it("should, when given an id, remove the corresponding object from the models property");
+        it("should, when given an id, remove the corresponding object from the models property",function(){
+          var students = new Collection([{name: 'Jim', id: '99'}, {name: 'Hector', id: '12'}]);
+           students.remove({name: 'Jim', id: '99'});
+
+           expect(students.models[0]).to.deep.equal({name: 'Hector', id: '12'});
+        });
+
+
+
+
         it("should decrease the models property's length by 1");
         it("should only accept a single string as an id argument");
         it("should return true on successful removal");

@@ -77,9 +77,17 @@ function Collection (models) {
 	}	
 
 	this.models.push(obj)
-	}		
-}
+   
+   };		
+
 	
+	this.remove = function (removeObj) {
+	 var result;
+	 
+	 this.models.splice (removeObj)
+	}
+
+}
 
 
 
