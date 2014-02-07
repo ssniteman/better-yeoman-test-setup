@@ -57,15 +57,23 @@ function Collection (models) {
  
     if (result) {
       return result;
-    }
-  }
+    };
+  };
 
    this.add = function (obj) {
-   	var result;
+	var result;
 
-	this.models.push(obj)
+	// if (obj.length > 1) {
+	//   throw new Error("Can only have one object");
+	// }; 
+	if (_.isEmpty(obj)){
+		throw new Error("Can't have an empty obj for argument");
+
 	}
 
+	
+	this.models.push(obj)
+	}		
 }
 	
 

@@ -59,18 +59,28 @@
         it("should increase the models property's length by 1",function(){
           var students = new Collection([{name: 'Jim', id: '99'}]);
             students.add({name: 'Josh', id: '4'});
-            console.log(students);
+          
             expect(students.models.length).to.equal(2);
         });
 
-        it("should only accept a single object as an argument",function(){
+        // it("should only accept a single object as an argument",function(){
+        //   var students = new Collection([{name: 'Jim', id: '99'}]);
+        //     expect(function(){students.add({name: 'Josh', id: '4'}, {name: 'Maurice', id: '5'})}).to.throw(Error);
+        // });
+
+        it("should not accept an empty object as an argument",function(){
           var students = new Collection([{name: 'Jim', id: '99'}]);
-            expect(function(){students.add({name: 'Josh', id: '4'}, {name: 'Maurice', id: '5'})}).to.throw(Error);
+            expect(function(){students.add({})}).to.throw(Error);
         });
 
-        it("should not accept an empty object as an argument");
-        it("should throw an error when given an object without and id property");
-      });
+
+
+        it("should throw an error when given an object without and id property",function(){
+          var students = new Collection([{name: 'Jim', id: '99'}]);
+           expect(function(){students.add({name: 'Josh', id: ""})}).to.throw(Error);
+        });
+
+       });
  
       describe("has a .remove() method",function(){
         it("should, when given an id, remove the corresponding object from the models property");
