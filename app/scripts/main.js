@@ -84,9 +84,9 @@ function Collection (models) {
 	this.remove = function (removeObj) {
 	 var result;
 	 
-	 this.models = _.reject(this.models, function(removeId){
-	 	return removeId.id == removeObj;
-	 })
+	this.models = _.reject(this.models, function(removeId){
+	 	return removeId.id === removeObj;
+	})
 
 	}
 

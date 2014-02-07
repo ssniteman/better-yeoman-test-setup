@@ -95,7 +95,7 @@
 
         it("should decrease the models property's length by 1",function(){
          var students = new Collection([{name: 'Jim', id: '99'}, {name: 'Hector', id: '12'}]);
-          students.remove({name: 'Jim', id: '99'});
+          students.remove('99');
 
           expect(students.models.length).to.equal(1);
 
