@@ -96,10 +96,11 @@ function Collection (models) {
 
 	};
 
-	this.empty = function (emptyObj) {
+	this.empty = function () {
 
-		
-	}
+	 this.models = [];
+
+	};
 
 };
 

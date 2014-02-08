@@ -113,14 +113,13 @@
       describe("has an .empty() method",function(){
         it("should clear out the models array",function(){
           var students = new Collection([{name: 'Will', id: '43'}, {name: 'Peter', id: '15'}]);
-           students.empty([{name: 'Will', id: '43'}, {name: 'Peter', id: '15'}]);
+           students.empty();
 
-           expect(students.models([1])).to.equal([]);
+           expect(students.models).to.deep.equal([]);
 
 
         });
       });
-
 
 
 
