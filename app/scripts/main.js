@@ -96,6 +96,11 @@ function Collection (models) {
 
 	};
 
+	this.empty = function (emptyObj) {
+
+		
+	}
+
 };
 
 
