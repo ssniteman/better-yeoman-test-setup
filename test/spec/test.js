@@ -182,7 +182,7 @@
           var students = new Collection([{name: 'Matt', id: '32'}, {name: 'Dan', id: '98'}]);
            students.length();
 
-           expect(students.models.length).to.have(2);
+           expect(students.models.length).to.equal(2);
         });
 
 
