@@ -135,29 +135,28 @@
 
       });
 
-      // describe("has an .random() method",function(){
-      //   it("should clear out the models array",function(){
-      //     var students = new Collection([{name: 'Will', id: '43'}, {name: 'Peter', id: '15'}]);
-      //      students.empty();
+      describe("has an .random() method",function(){
+        it("should return a random object from the models array",function(){
+         var students = new Collection([{name: 'Kate', id: '46'}, {name: 'Mark', id: '54'}, {name: 'Ed', id: '76'}]);
 
-      //      expect(students.models).to.deep.equal([]);
-      //   });
+          expect(students)to.include(students.random());
 
-        // it("should return the models array length to zero",function(){
-        //   var students = new Collection([{name: 'Will', id: '43'}, {name: 'Peter', id: '15'}]);
-        //    students.empty();
+        });
 
-        //    expect(students.models.length).to.equal(0);
-        // });
+        it("should accept only a number as an argument",function(){
+          
 
-        // it("should return true if models array is empty",function(){
-        //   students.empty() = true;
-        //    expect(true).to.equal(true);
-        // });
+        });
+
+        it("should return true if a random object is returned",function(){
+          
 
 
+        });
 
-      // });
+
+
+      });
 
 
 

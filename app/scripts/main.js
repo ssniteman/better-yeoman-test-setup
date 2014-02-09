@@ -103,6 +103,10 @@ function Collection (models) {
 
 	};
 
+	this.random = function (ran) {
+
+	}
+
 };
 
 
