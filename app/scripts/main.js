@@ -105,7 +105,15 @@ function Collection (models) {
 
 	this.random = function (ran) {
 
+	return _.sample(this.models);
+	
+	};
+
+	this.length = function () {
+
+	return this.models.length;
 	}
+
 
 };
 

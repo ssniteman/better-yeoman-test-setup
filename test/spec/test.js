@@ -139,24 +139,60 @@
         it("should return a random object from the models array",function(){
          var students = new Collection([{name: 'Kate', id: '46'}, {name: 'Mark', id: '54'}, {name: 'Ed', id: '76'}]);
 
-          expect(students)to.include(students.random());
+          expect(students.models).to.include(students.random());
 
         });
 
-        it("should accept only a number as an argument",function(){
+        // it("should accept only a number as an argument",function(){
           
 
-        });
+        // });
 
-        it("should return true if a random object is returned",function(){
+        // it("should return true if a random object is returned",function(){
           
 
 
-        });
+        // });
+
+
+
+      // describe("has a .random() method", function(){
+      //   it('should return a random object from the models array', function(){
+      //     var fallStudents = [{name: 'Eddie', id: '5'},{name: 'Grandpa', id:'6'}, {name: 'Marylin', id:'7'}, {name: 'Herman', id: '8'}];
+      //     var students = new Collection(fallStudents);
+      //     var randomSample = students.random();
+      //     var itsThere = true;
+      //     _.each(randomSample, function(eachObject) {
+      //       if (!_.contains(students.models, eachObject))
+      //       {
+      //         itsThere = false;
+      //       };
+      //     })
+      //     expect(itsThere).to.equal(true); 
+      //   });
 
 
 
       });
+
+
+
+      describe("has an .length() method",function(){
+        it("should return the length of the models array",function(){
+          var students = new Collection([{name: 'Matt', id: '32'}, {name: 'Dan', id: '98'}]);
+           students.length();
+
+           expect(students.models.length).to.have(2);
+        });
+
+
+      });
+
+
+
+
+
+
 
 
 
