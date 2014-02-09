@@ -125,14 +125,39 @@
            expect(students.models.length).to.equal(0);
         });
 
-        // it("",function(){
-        //   var students 
+        it("should return true if models array is empty",function(){
+          var students = new Collection([{name: 'Will', id: '43'}, {name: 'Peter', id: '15'}]);
+           expect(students.empty()).to.equal(true);
 
-        // });
+        });
 
 
 
       });
+
+      // describe("has an .random() method",function(){
+      //   it("should clear out the models array",function(){
+      //     var students = new Collection([{name: 'Will', id: '43'}, {name: 'Peter', id: '15'}]);
+      //      students.empty();
+
+      //      expect(students.models).to.deep.equal([]);
+      //   });
+
+        // it("should return the models array length to zero",function(){
+        //   var students = new Collection([{name: 'Will', id: '43'}, {name: 'Peter', id: '15'}]);
+        //    students.empty();
+
+        //    expect(students.models.length).to.equal(0);
+        // });
+
+        // it("should return true if models array is empty",function(){
+        //   students.empty() = true;
+        //    expect(true).to.equal(true);
+        // });
+
+
+
+      // });
 
 
 
